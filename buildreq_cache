@@ -1,0 +1,9 @@
+0.100.18
+R-crosstalk
+R-htmlwidgets
+R-manipulateWidget
+glu-dev
+mesa-dev
+pkgconfig(freetype2)
+pkgconfig(libpng)
+pkgconfig(x11)
