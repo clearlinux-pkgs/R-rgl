@@ -1,7 +1,8 @@
-0.100.18
+0.100.19
 R-crosstalk
 R-htmlwidgets
 R-manipulateWidget
+R-yaml
 glu-dev
 mesa-dev
 pkgconfig(freetype2)
