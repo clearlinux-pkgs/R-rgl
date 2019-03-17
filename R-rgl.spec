@@ -4,20 +4,18 @@
 #
 Name     : R-rgl
 Version  : 0.100.19
-Release  : 16
+Release  : 17
 URL      : https://cran.r-project.org/src/contrib/rgl_0.100.19.tar.gz
 Source0  : https://cran.r-project.org/src/contrib/rgl_0.100.19.tar.gz
 Summary  : 3D Visualization Using OpenGL
 Group    : Development/Tools
 License  : GL2PS GPL-2.0
 Requires: R-rgl-lib = %{version}-%{release}
-Requires: R-crosstalk
-Requires: R-htmlwidgets
-Requires: R-manipulateWidget
-Requires: R-yaml
+Requires: R-rmarkdown
 BuildRequires : R-crosstalk
 BuildRequires : R-htmlwidgets
 BuildRequires : R-manipulateWidget
+BuildRequires : R-rmarkdown
 BuildRequires : R-yaml
 BuildRequires : buildreq-R
 BuildRequires : glu-dev
@@ -50,10 +48,10 @@ export http_proxy=http://127.0.0.1:9/
 export https_proxy=http://127.0.0.1:9/
 export no_proxy=localhost,127.0.0.1,0.0.0.0
 export LANG=C
-export SOURCE_DATE_EPOCH=1552425514
+export SOURCE_DATE_EPOCH=1552865057
 
 %install
-export SOURCE_DATE_EPOCH=1552425514
+export SOURCE_DATE_EPOCH=1552865057
 rm -rf %{buildroot}
 export LANG=C
 export CFLAGS="$CFLAGS -O3 -flto -fno-semantic-interposition "
@@ -89,8 +87,7 @@ export http_proxy=http://127.0.0.1:9/
 export https_proxy=http://127.0.0.1:9/
 export no_proxy=localhost,127.0.0.1,0.0.0.0
 export _R_CHECK_FORCE_SUGGESTS_=false
-R CMD check --no-manual --no-examples --no-codoc -l %{buildroot}/usr/lib64/R/library rgl|| : 
-cp ~/.stash/* %{buildroot}/usr/lib64/R/library/*/libs/ || :
+R CMD check --no-manual --no-examples --no-codoc  rgl || :
 
 
 %files
@@ -157,11 +154,11 @@ cp ~/.stash/* %{buildroot}/usr/lib64/R/library/*/libs/ || :
 /usr/lib64/R/library/rgl/htmlwidgets/rglPlayer.yaml
 /usr/lib64/R/library/rgl/htmlwidgets/rglWebGL.js
 /usr/lib64/R/library/rgl/htmlwidgets/rglWebGL.yaml
-/usr/lib64/R/library/rgl/libs/symbols.rds
 /usr/lib64/R/library/rgl/shinyDemo/server.R
 /usr/lib64/R/library/rgl/shinyDemo/ui.R
 /usr/lib64/R/library/rgl/shinySimple/server.R
 /usr/lib64/R/library/rgl/shinySimple/ui.R
+/usr/lib64/R/library/rgl/tests/demos.R
 /usr/lib64/R/library/rgl/textures/bump_dust.png
 /usr/lib64/R/library/rgl/textures/nightfire.png
 /usr/lib64/R/library/rgl/textures/particle.png

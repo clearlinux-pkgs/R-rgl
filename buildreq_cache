@@ -2,6 +2,7 @@
 R-crosstalk
 R-htmlwidgets
 R-manipulateWidget
+R-rmarkdown
 R-yaml
 glu-dev
 mesa-dev
