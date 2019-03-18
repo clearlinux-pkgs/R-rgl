@@ -4,14 +4,13 @@
 #
 Name     : R-rgl
 Version  : 0.100.19
-Release  : 17
+Release  : 18
 URL      : https://cran.r-project.org/src/contrib/rgl_0.100.19.tar.gz
 Source0  : https://cran.r-project.org/src/contrib/rgl_0.100.19.tar.gz
 Summary  : 3D Visualization Using OpenGL
 Group    : Development/Tools
 License  : GL2PS GPL-2.0
 Requires: R-rgl-lib = %{version}-%{release}
-Requires: R-rmarkdown
 BuildRequires : R-crosstalk
 BuildRequires : R-htmlwidgets
 BuildRequires : R-manipulateWidget
@@ -48,10 +47,10 @@ export http_proxy=http://127.0.0.1:9/
 export https_proxy=http://127.0.0.1:9/
 export no_proxy=localhost,127.0.0.1,0.0.0.0
 export LANG=C
-export SOURCE_DATE_EPOCH=1552865057
+export SOURCE_DATE_EPOCH=1552867512
 
 %install
-export SOURCE_DATE_EPOCH=1552865057
+export SOURCE_DATE_EPOCH=1552867512
 rm -rf %{buildroot}
 export LANG=C
 export CFLAGS="$CFLAGS -O3 -flto -fno-semantic-interposition "
