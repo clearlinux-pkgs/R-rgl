@@ -4,17 +4,21 @@
 #
 Name     : R-rgl
 Version  : 0.100.19
-Release  : 21
+Release  : 22
 URL      : https://cran.r-project.org/src/contrib/rgl_0.100.19.tar.gz
 Source0  : https://cran.r-project.org/src/contrib/rgl_0.100.19.tar.gz
 Summary  : 3D Visualization Using OpenGL
 Group    : Development/Tools
 License  : GL2PS GPL-2.0
 Requires: R-rgl-lib = %{version}-%{release}
+Requires: R-miniUI
 BuildRequires : R-crosstalk
 BuildRequires : R-htmlwidgets
 BuildRequires : R-manipulateWidget
+BuildRequires : R-miniUI
 BuildRequires : R-rmarkdown
+BuildRequires : R-webshot
+BuildRequires : R-xfun
 BuildRequires : R-yaml
 BuildRequires : buildreq-R
 BuildRequires : glu-dev
@@ -47,10 +51,10 @@ export http_proxy=http://127.0.0.1:9/
 export https_proxy=http://127.0.0.1:9/
 export no_proxy=localhost,127.0.0.1,0.0.0.0
 export LANG=C
-export SOURCE_DATE_EPOCH=1552867512
+export SOURCE_DATE_EPOCH=1556498068
 
 %install
-export SOURCE_DATE_EPOCH=1552867512
+export SOURCE_DATE_EPOCH=1556498068
 rm -rf %{buildroot}
 export LANG=C
 export CFLAGS="$CFLAGS -O3 -flto -fno-semantic-interposition "
@@ -86,7 +90,7 @@ export http_proxy=http://127.0.0.1:9/
 export https_proxy=http://127.0.0.1:9/
 export no_proxy=localhost,127.0.0.1,0.0.0.0
 export _R_CHECK_FORCE_SUGGESTS_=false
-R CMD check --no-manual --no-examples --no-codoc  rgl || :
+R CMD check --no-manual --no-examples --no-codoc rgl || :
 
 
 %files
