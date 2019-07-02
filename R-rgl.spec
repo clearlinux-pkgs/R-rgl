@@ -4,7 +4,7 @@
 #
 Name     : R-rgl
 Version  : 0.100.24
-Release  : 23
+Release  : 24
 URL      : https://cran.r-project.org/src/contrib/rgl_0.100.24.tar.gz
 Source0  : https://cran.r-project.org/src/contrib/rgl_0.100.24.tar.gz
 Summary  : 3D Visualization Using OpenGL
@@ -12,16 +12,26 @@ Group    : Development/Tools
 License  : GL2PS GPL-2.0
 Requires: R-rgl-lib = %{version}-%{release}
 Requires: R-crosstalk
+Requires: R-htmltools
 Requires: R-htmlwidgets
+Requires: R-jsonlite
+Requires: R-knitr
+Requires: R-magrittr
 Requires: R-manipulateWidget
-Requires: R-miniUI
-Requires: R-rmarkdown
+Requires: R-shiny
 BuildRequires : R-crosstalk
+BuildRequires : R-htmltools
 BuildRequires : R-htmlwidgets
+BuildRequires : R-jsonlite
+BuildRequires : R-knitr
+BuildRequires : R-magrittr
 BuildRequires : R-manipulateWidget
 BuildRequires : R-miniUI
 BuildRequires : R-rmarkdown
+BuildRequires : R-shiny
 BuildRequires : R-webshot
+BuildRequires : R-xfun
+BuildRequires : R-yaml
 BuildRequires : buildreq-R
 BuildRequires : glu-dev
 BuildRequires : mesa-dev
@@ -30,12 +40,10 @@ BuildRequires : pkgconfig(libpng)
 BuildRequires : pkgconfig(x11)
 
 %description
-The currently shipping OpenGL32.DLL from Microsoft only has entry points
-for OpenGL 1.1. If an application wants to use OpenGL {1.2, 1.3, 1.4, 1.5}
-functions, it has to use wglGetProcAddress() in order to obtain the entry
-points from the driver. The files in this distribution enable the application
-pretend that there is full support for OpenGL {1.2/1.3/1.4/1.5} if the
-underlying implementation supports OpenGL {1.2/1.3/1.4/1.5}.
+functions modelled on base graphics (plot3d(), etc.) as well as functions for
+    constructing representations of geometric objects (cube3d(), etc.).  Output
+    may be on screen using OpenGL, or to various standard 3D file formats including
+    WebGL, PLY, OBJ, STL as well as 2D image formats, including PNG, Postscript, SVG, PGF.
 
 %package lib
 Summary: lib components for the R-rgl package.
@@ -53,10 +61,10 @@ export http_proxy=http://127.0.0.1:9/
 export https_proxy=http://127.0.0.1:9/
 export no_proxy=localhost,127.0.0.1,0.0.0.0
 export LANG=C
-export SOURCE_DATE_EPOCH=1561567893
+export SOURCE_DATE_EPOCH=1562030028
 
 %install
-export SOURCE_DATE_EPOCH=1561567893
+export SOURCE_DATE_EPOCH=1562030028
 rm -rf %{buildroot}
 export LANG=C
 export CFLAGS="$CFLAGS -O3 -flto -fno-semantic-interposition "
