@@ -1,11 +1,5 @@
 0.100.24
-R-crosstalk
-R-htmlwidgets
-R-manipulateWidget
-R-miniUI
 R-rmarkdown
-R-xfun
-R-yaml
 glu-dev
 mesa-dev
 pkgconfig(freetype2)

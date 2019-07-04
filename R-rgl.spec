@@ -4,7 +4,7 @@
 #
 Name     : R-rgl
 Version  : 0.100.24
-Release  : 24
+Release  : 25
 URL      : https://cran.r-project.org/src/contrib/rgl_0.100.24.tar.gz
 Source0  : https://cran.r-project.org/src/contrib/rgl_0.100.24.tar.gz
 Summary  : 3D Visualization Using OpenGL
@@ -18,6 +18,7 @@ Requires: R-jsonlite
 Requires: R-knitr
 Requires: R-magrittr
 Requires: R-manipulateWidget
+Requires: R-rmarkdown
 Requires: R-shiny
 BuildRequires : R-crosstalk
 BuildRequires : R-htmltools
@@ -26,12 +27,9 @@ BuildRequires : R-jsonlite
 BuildRequires : R-knitr
 BuildRequires : R-magrittr
 BuildRequires : R-manipulateWidget
-BuildRequires : R-miniUI
 BuildRequires : R-rmarkdown
 BuildRequires : R-shiny
 BuildRequires : R-webshot
-BuildRequires : R-xfun
-BuildRequires : R-yaml
 BuildRequires : buildreq-R
 BuildRequires : glu-dev
 BuildRequires : mesa-dev
@@ -60,13 +58,13 @@ lib components for the R-rgl package.
 export http_proxy=http://127.0.0.1:9/
 export https_proxy=http://127.0.0.1:9/
 export no_proxy=localhost,127.0.0.1,0.0.0.0
-export LANG=C
-export SOURCE_DATE_EPOCH=1562030028
+export LANG=C.UTF-8
+export SOURCE_DATE_EPOCH=1562208519
 
 %install
-export SOURCE_DATE_EPOCH=1562030028
+export SOURCE_DATE_EPOCH=1562208519
 rm -rf %{buildroot}
-export LANG=C
+export LANG=C.UTF-8
 export CFLAGS="$CFLAGS -O3 -flto -fno-semantic-interposition "
 export FCFLAGS="$CFLAGS -O3 -flto -fno-semantic-interposition "
 export FFLAGS="$CFLAGS -O3 -flto -fno-semantic-interposition "
@@ -95,7 +93,7 @@ R CMD INSTALL --preclean --install-tests --built-timestamp=${SOURCE_DATE_EPOCH} 
 cp ~/.stash/* %{buildroot}/usr/lib64/R/library/*/libs/ || :
 %{__rm} -rf %{buildroot}%{_datadir}/R/library/R.css
 %check
-export LANG=C
+export LANG=C.UTF-8
 export http_proxy=http://127.0.0.1:9/
 export https_proxy=http://127.0.0.1:9/
 export no_proxy=localhost,127.0.0.1,0.0.0.0
