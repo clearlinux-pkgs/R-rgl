@@ -4,7 +4,7 @@
 #
 Name     : R-rgl
 Version  : 0.100.24
-Release  : 26
+Release  : 27
 URL      : https://cran.r-project.org/src/contrib/rgl_0.100.24.tar.gz
 Source0  : https://cran.r-project.org/src/contrib/rgl_0.100.24.tar.gz
 Summary  : 3D Visualization Using OpenGL
