@@ -4,7 +4,7 @@
 #
 Name     : R-rgl
 Version  : 0.100.30
-Release  : 29
+Release  : 30
 URL      : https://cran.r-project.org/src/contrib/rgl_0.100.30.tar.gz
 Source0  : https://cran.r-project.org/src/contrib/rgl_0.100.30.tar.gz
 Summary  : 3D Visualization Using OpenGL
@@ -26,6 +26,7 @@ BuildRequires : R-jsonlite
 BuildRequires : R-knitr
 BuildRequires : R-magrittr
 BuildRequires : R-manipulateWidget
+BuildRequires : R-rmarkdown
 BuildRequires : R-shiny
 BuildRequires : R-webshot
 BuildRequires : buildreq-R
@@ -34,6 +35,7 @@ BuildRequires : mesa-dev
 BuildRequires : pkgconfig(freetype2)
 BuildRequires : pkgconfig(libpng)
 BuildRequires : pkgconfig(x11)
+BuildRequires : util-linux
 
 %description
 The currently shipping OpenGL32.DLL from Microsoft only has entry points
@@ -59,10 +61,10 @@ export http_proxy=http://127.0.0.1:9/
 export https_proxy=http://127.0.0.1:9/
 export no_proxy=localhost,127.0.0.1,0.0.0.0
 export LANG=C.UTF-8
-export SOURCE_DATE_EPOCH=1566312029
+export SOURCE_DATE_EPOCH=1571890174
 
 %install
-export SOURCE_DATE_EPOCH=1566312029
+export SOURCE_DATE_EPOCH=1571890174
 rm -rf %{buildroot}
 export LANG=C.UTF-8
 export CFLAGS="$CFLAGS -O3 -flto -fno-semantic-interposition "
