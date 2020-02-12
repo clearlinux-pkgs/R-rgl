@@ -1,8 +1,7 @@
-0.100.30
-R-rmarkdown
+0.100.47
+freetype-dev
 glu-dev
 mesa-dev
 pkgconfig(freetype2)
 pkgconfig(libpng)
 pkgconfig(x11)
-util-linux
