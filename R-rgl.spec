@@ -4,7 +4,7 @@
 #
 Name     : R-rgl
 Version  : 0.100.54
-Release  : 36
+Release  : 37
 URL      : https://cran.r-project.org/src/contrib/rgl_0.100.54.tar.gz
 Source0  : https://cran.r-project.org/src/contrib/rgl_0.100.54.tar.gz
 Summary  : 3D Visualization Using OpenGL
@@ -37,12 +37,10 @@ BuildRequires : pkgconfig(libpng)
 BuildRequires : pkgconfig(x11)
 
 %description
-The currently shipping OpenGL32.DLL from Microsoft only has entry points
-for OpenGL 1.1. If an application wants to use OpenGL {1.2, 1.3, 1.4, 1.5}
-functions, it has to use wglGetProcAddress() in order to obtain the entry
-points from the driver. The files in this distribution enable the application
-pretend that there is full support for OpenGL {1.2/1.3/1.4/1.5} if the
-underlying implementation supports OpenGL {1.2/1.3/1.4/1.5}.
+functions modelled on base graphics (plot3d(), etc.) as well as functions for
+    constructing representations of geometric objects (cube3d(), etc.).  Output
+    may be on screen using OpenGL, or to various standard 3D file formats including
+    WebGL, PLY, OBJ, STL as well as 2D image formats, including PNG, Postscript, SVG, PGF.
 
 %package lib
 Summary: lib components for the R-rgl package.
@@ -54,21 +52,22 @@ lib components for the R-rgl package.
 
 %prep
 %setup -q -c -n rgl
+cd %{_builddir}/rgl
 
 %build
 export http_proxy=http://127.0.0.1:9/
 export https_proxy=http://127.0.0.1:9/
 export no_proxy=localhost,127.0.0.1,0.0.0.0
 export LANG=C.UTF-8
-export SOURCE_DATE_EPOCH=1587065696
+export SOURCE_DATE_EPOCH=1589774381
 
 %install
-export SOURCE_DATE_EPOCH=1587065696
+export SOURCE_DATE_EPOCH=1589774381
 rm -rf %{buildroot}
 export LANG=C.UTF-8
 export CFLAGS="$CFLAGS -O3 -flto -fno-semantic-interposition "
-export FCFLAGS="$CFLAGS -O3 -flto -fno-semantic-interposition "
-export FFLAGS="$CFLAGS -O3 -flto -fno-semantic-interposition "
+export FCFLAGS="$FFLAGS -O3 -flto -fno-semantic-interposition "
+export FFLAGS="$FFLAGS -O3 -flto -fno-semantic-interposition "
 export CXXFLAGS="$CXXFLAGS -O3 -flto -fno-semantic-interposition "
 export AR=gcc-ar
 export RANLIB=gcc-ranlib
