@@ -4,7 +4,7 @@
 #
 Name     : R-rgl
 Version  : 0.100.54
-Release  : 38
+Release  : 39
 URL      : https://cran.r-project.org/src/contrib/rgl_0.100.54.tar.gz
 Source0  : https://cran.r-project.org/src/contrib/rgl_0.100.54.tar.gz
 Summary  : 3D Visualization Using OpenGL
