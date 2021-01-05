@@ -4,7 +4,7 @@
 #
 Name     : R-rgl
 Version  : 0.103.5
-Release  : 40
+Release  : 41
 URL      : https://cran.r-project.org/src/contrib/rgl_0.103.5.tar.gz
 Source0  : https://cran.r-project.org/src/contrib/rgl_0.103.5.tar.gz
 Summary  : 3D Visualization Using OpenGL
@@ -18,6 +18,7 @@ Requires: R-jsonlite
 Requires: R-knitr
 Requires: R-magrittr
 Requires: R-manipulateWidget
+Requires: R-mathjaxr
 Requires: R-shiny
 BuildRequires : R-crosstalk
 BuildRequires : R-htmltools
@@ -60,10 +61,10 @@ export http_proxy=http://127.0.0.1:9/
 export https_proxy=http://127.0.0.1:9/
 export no_proxy=localhost,127.0.0.1,0.0.0.0
 export LANG=C.UTF-8
-export SOURCE_DATE_EPOCH=1609797330
+export SOURCE_DATE_EPOCH=1609805711
 
 %install
-export SOURCE_DATE_EPOCH=1609797330
+export SOURCE_DATE_EPOCH=1609805711
 rm -rf %{buildroot}
 export LANG=C.UTF-8
 export CFLAGS="$CFLAGS -O3 -flto -fno-semantic-interposition "
