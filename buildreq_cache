@@ -1,6 +1,7 @@
-0.105.22
+0.106.6
 freetype-dev
 glu-dev
+libpng-dev
 mesa-dev
 pkgconfig(freetype2)
 pkgconfig(libpng)
