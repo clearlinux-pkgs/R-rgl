@@ -4,7 +4,7 @@
 #
 Name     : R-rgl
 Version  : 0.106.8
-Release  : 49
+Release  : 50
 URL      : https://cran.r-project.org/src/contrib/rgl_0.106.8.tar.gz
 Source0  : https://cran.r-project.org/src/contrib/rgl_0.106.8.tar.gz
 Summary  : 3D Visualization Using OpenGL
