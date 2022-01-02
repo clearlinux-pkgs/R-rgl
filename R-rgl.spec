@@ -4,7 +4,7 @@
 #
 Name     : R-rgl
 Version  : 0.108.3
-Release  : 60
+Release  : 61
 URL      : https://cran.r-project.org/src/contrib/rgl_0.108.3.tar.gz
 Source0  : https://cran.r-project.org/src/contrib/rgl_0.108.3.tar.gz
 Summary  : 3D Visualization Using OpenGL
@@ -55,10 +55,10 @@ export http_proxy=http://127.0.0.1:9/
 export https_proxy=http://127.0.0.1:9/
 export no_proxy=localhost,127.0.0.1,0.0.0.0
 export LANG=C.UTF-8
-export SOURCE_DATE_EPOCH=1637603837
+export SOURCE_DATE_EPOCH=1641095833
 
 %install
-export SOURCE_DATE_EPOCH=1637603837
+export SOURCE_DATE_EPOCH=1641095833
 rm -rf %{buildroot}
 export LANG=C.UTF-8
 export CFLAGS="$CFLAGS -O3 -flto -fno-semantic-interposition "
