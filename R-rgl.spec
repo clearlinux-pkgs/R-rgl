@@ -5,7 +5,7 @@
 #
 Name     : R-rgl
 Version  : 1.2.1
-Release  : 78
+Release  : 79
 URL      : https://cran.r-project.org/src/contrib/rgl_1.2.1.tar.gz
 Source0  : https://cran.r-project.org/src/contrib/rgl_1.2.1.tar.gz
 Summary  : 3D Visualization Using OpenGL
