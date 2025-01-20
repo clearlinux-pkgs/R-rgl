@@ -6,10 +6,10 @@
 # autospec commit: f4a13a5
 #
 Name     : R-rgl
-Version  : 1.3.16
-Release  : 87
-URL      : https://ftp.osuosl.org/pub/cran/src/contrib/rgl_1.3.16.tar.gz
-Source0  : https://ftp.osuosl.org/pub/cran/src/contrib/rgl_1.3.16.tar.gz
+Version  : 1.3.17
+Release  : 88
+URL      : https://ftp.osuosl.org/pub/cran/src/contrib/rgl_1.3.17.tar.gz
+Source0  : https://ftp.osuosl.org/pub/cran/src/contrib/rgl_1.3.17.tar.gz
 Summary  : 3D Visualization Using OpenGL
 Group    : Development/Tools
 License  : GL2PS GPL-2.0 ISC
@@ -77,10 +77,10 @@ export http_proxy=http://127.0.0.1:9/
 export https_proxy=http://127.0.0.1:9/
 export no_proxy=localhost,127.0.0.1,0.0.0.0
 export LANG=C.UTF-8
-export SOURCE_DATE_EPOCH=1736204200
+export SOURCE_DATE_EPOCH=1737392649
 
 %install
-export SOURCE_DATE_EPOCH=1736204200
+export SOURCE_DATE_EPOCH=1737392649
 rm -rf %{buildroot}
 mkdir -p %{buildroot}/usr/share/package-licenses/R-rgl
 cp %{_builddir}/rgl/COPYING %{buildroot}/usr/share/package-licenses/R-rgl/4223014cc138a542580deb3408eb736830bf3543 || :
